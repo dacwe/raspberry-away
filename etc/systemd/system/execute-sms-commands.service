@@ -1,0 +1,12 @@
+[Unit]
+Description=Execute sms commands
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/execute_sms_commands.py
+Restart=always
+User=root
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target
